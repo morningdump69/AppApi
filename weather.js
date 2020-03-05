@@ -8,11 +8,10 @@ const getWeather = async locationObj => {
   const URL = `https://api.darksky.net/forecast/${ApiKey}/${lat},${long}`;
   try {
     const response = await axios.get(URL);
-    console.log(
-      `The weather in ${location} is ${response.data.currently.summary} 
-       and the temperature is 
-       ${(response.data.currently.temperature - 32) * (5 / 9)} degrees celcius.`
-    );
+    return {
+      location: location,
+      data: response.data.currently
+    };
   } catch (error) {
     console.error(error);
   }
