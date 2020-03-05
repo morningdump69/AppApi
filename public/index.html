@@ -5,19 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>me weather app</h1>
-    <h1 id="locate">enter location below</h1>
-    <h1 id="weather">enter location below</h1>
-    <h1 id="temperature">Display Temperature</h1>
-    <h1 id="percipI">Rain intensity</h1>
-    <h1 id="percipP">Chance of rain</h1>
-    <h1 id="humidity">Humidity</h1>
+    <nav class="navbar navbar-light bg-light">
+      <input
+        id="location"
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button id="button" class="btn btn-outline-success my-2 my-sm-0">
+        Search
+      </button>
+    </nav>
 
-    <input id="location" type="text" />
-    <button id="button">get weather</button>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 id="locate">enter location above</h5>
+        <h6 id="weather">weather type</h6>
+        <p id="temperature">Display Temperature</p>
+        <p id="percipI">Rain intensity</p>
+        <p id="percipP">Chance of rain</p>
+        <p id="humidity">Humidity</p>
+      </div>
+    </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

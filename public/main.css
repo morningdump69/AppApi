@@ -1,0 +1,9 @@
+#location {
+  width: 200px;
+  display: flex;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

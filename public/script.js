@@ -15,7 +15,10 @@ button.addEventListener("click", async () => {
 
   locate.textContent = location.location;
   weather.textContent = location.data.summary;
-  temperature.textContent = location.data.temperature - 32 * (5 / 9).toFixed(2);
+  temperature.textContent = (
+    (location.data.temperature - 32) *
+    (5 / 9)
+  ).toFixed(2);
   percipI.textContent = location.data.precipIntensity;
   percipP.textContent = location.data.precipProbability;
   humidity.textContent = location.data.humidity;
