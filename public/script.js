@@ -8,9 +8,7 @@ const percipP = document.getElementById("percipP");
 const humidity = document.getElementById("humidity");
 
 button.addEventListener("click", async () => {
-  const response = await fetch(
-    `http://localhost:3002/weather?address=${input.value}`
-  );
+  const response = await fetch(`/weather?address=${input.value}`);
   const location = await response.json();
 
   locate.textContent = location.location;

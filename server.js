@@ -3,6 +3,7 @@ const { getMain } = require("./app");
 const path = require("path");
 
 const app = express();
+const port = process.env.PORT || 3002;
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/weather", async (req, res) => {
@@ -10,6 +11,6 @@ app.get("/weather", async (req, res) => {
   res.send(response);
 });
 
-app.listen(3002, () => {
-  console.log(`listening on port 3002`);
+app.listen(port, () => {
+  console.log(`server running on port ${port}`);
 });
