@@ -1,5 +1,5 @@
 const axios = require("axios");
-const ApiKey = "";
+const ApiKey = "df27881c351c86856f354f7512e45545";
 
 const URL = `https://api.darksky.net/forecast/${ApiKey}/37.8267,-122.4233`;
 
