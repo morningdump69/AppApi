@@ -8,6 +8,10 @@ const getCenter = async location => {
 
   try {
     const response = await axios.get(GEO);
+    console.log(
+      response.data.features[0].center[1],
+      response.data.features[0].center[0]
+    );
 
     return {
       lat: response.data.features[0].center[1],

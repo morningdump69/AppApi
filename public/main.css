@@ -10,3 +10,8 @@
   align-items: center;
   margin-top: 25vh;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+}

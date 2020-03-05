@@ -11,9 +11,24 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
+    <div class="jumbotron">
+      <h1 class="display-4">Lets get the weather bois</h1>
+      <p class="lead">
+        This is a simple weather app which uses api's to get the weather,
+      </p>
+      <p>
+        currently map will only show on first submit and not submit, refresh
+        page to submit a new place with a map showing
+      </p>
+
       <input
         id="location"
         class="form-control mr-sm-2"
@@ -24,7 +39,7 @@
       <button id="button" class="btn btn-outline-success my-2 my-sm-0">
         Search
       </button>
-    </nav>
+    </div>
     <div class="container">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -36,6 +51,7 @@
           <p id="humidity">Humidity</p>
         </div>
       </div>
+      <div id="map"></div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
