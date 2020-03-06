@@ -11,6 +11,14 @@ const mapImage = document.getElementById("map-image");
 button.addEventListener("click", async () => {
   const response = await fetch(`/weather?address=${input.value}`);
   const data = await response.json();
+  let mapWrapper = document.getElementById("mapWrapper");
+  let map = document.getElementById("map");
+
+  mapWrapper.removeChild(map);
+
+  let newMap = document.createElement("div");
+  newMap.id = "map";
+  mapWrapper.appendChild(newMap);
 
   locate.textContent = data.weather.location;
   weather.textContent = data.weather.data.summary;
@@ -25,11 +33,9 @@ button.addEventListener("click", async () => {
   L.mapquest.key = "1NLh0nq3uGFgmHawNfb5ttFJYHYHs9RG";
 
   // 'map' refers to a <div> element with the ID map
-  let rossMap = L.mapquest.map("map", {
+  L.mapquest.map("map", {
     center: [data.locationData.lat, data.locationData.long],
     layers: L.mapquest.tileLayer("map"),
     zoom: 12
   });
-
-  rossMap.off();
 });
